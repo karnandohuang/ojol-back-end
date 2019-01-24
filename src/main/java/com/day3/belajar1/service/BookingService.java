@@ -16,11 +16,15 @@ public class BookingService {
         return bookingRepository.findAll();
     }
 
-    public List<Booking> getBookingListHistory(String status) throws Exception{
-        return bookingRepository.findAllByStatus(status);
+    public List<Booking> getBookingListHistory(int accountId, String status) throws Exception{
+        return bookingRepository.findAllByAccount_IdAndStatus(accountId, status);
     }
 
     public Booking saveBooking(Booking booking) throws Exception{
         return bookingRepository.save(booking);
+    }
+
+    public Booking deleteBooking(int id) throws Exception{
+        return bookingRepository.deleteById(id);
     }
 }

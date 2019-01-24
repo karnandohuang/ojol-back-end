@@ -17,4 +17,12 @@ public class DriverService {
         return driverRepository.findAll();
     }
 
+    public Driver getDriver(int id) throws Exception{
+        return driverRepository.findDriverById(id);
+    }
+
+    public Driver saveDriver(Driver driver) throws Exception{
+        return driverRepository.save(driver);
+    }
+
 }

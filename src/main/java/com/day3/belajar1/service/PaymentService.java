@@ -17,4 +17,12 @@ public class PaymentService {
         return paymentRepository.findAll();
     }
 
+    public Payment savePayment(Payment payment) throws Exception {
+        return paymentRepository.save(payment);
+    }
+
+    public Payment getPayment(int id) throws Exception {
+        return paymentRepository.findPaymentById(id);
+    }
+
 }

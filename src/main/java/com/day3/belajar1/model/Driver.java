@@ -1,6 +1,7 @@
 package com.day3.belajar1.model;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 

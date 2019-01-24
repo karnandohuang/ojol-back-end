@@ -35,4 +35,6 @@ public class Booking {
     @JoinColumn(name = "PAYMENT_ID", referencedColumnName = "ID")
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Payment payment;
+
+    private int price;
 }

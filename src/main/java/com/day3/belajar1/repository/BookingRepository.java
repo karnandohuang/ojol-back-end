@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface BookingRepository extends JpaRepository<Booking, String> {
 
-    List<Booking> findAllByStatus(String status);
-
+    List<Booking> findAllByAccount_IdAndStatus(int accountId, String status);
+    Booking deleteById(int id);
 }

@@ -1,5 +1,6 @@
 package com.day3.belajar1.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Account {
 //    @Column(name = "BALANCE")
     private int balance;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
     private List<Booking> bookingList;
 
